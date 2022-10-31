@@ -52,10 +52,10 @@ console.log(characters.map(getNameAndHeight));
 //4. Get array of all first names
 console.log("Get array of all first names");
 function getArraysOfFirstNames(item) {
-    let arrNames = characters.map(character => character.name.split(' ')[0]);
-    return arrNames;
+    let arrNames = characters.map(characters => characters.name.split(' ')[0]);
+    console.log(arrNames);
 }
-console.log(getArraysOfFirstNames());
+getArraysOfFirstNames();
 
 
 //***REDUCE***
@@ -75,7 +75,9 @@ let eyeColor = characters.reduce((a, b) => ({ eye_color: a.eye_color == 'blue' +
 console.log(eyeColor);
 
 //4. Get total number of characters in all the character names
-
+console.log("4. Get total number of characters in all the character names");
+let totalCharacters = characters.reduce((a, b) => a + b.name.length, 0);
+console.log(totalCharacters);
 
 
 //***FILTER***
